@@ -9,7 +9,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(__dirname));
 
-app.set('port', process.env.PORT || 9080);
+app.set('port', process.env.PORT || 8000);
 
 var server = app.listen(app.get('port'), function(){
 	console.log('app started at port: '+app.get('port'));
