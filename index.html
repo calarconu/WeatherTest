@@ -1,0 +1,43 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+		<title>Acid Labs Test</title>
+		<link href="components/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+		<link href="components/css/style.css" rel="stylesheet" type="text/css">
+	</head>
+	<body>
+		<div id="content">
+			<div id="blur"></div>
+			<div class="text-class">
+				<div class="time">
+					<span><p id="time_hour"></p></span>
+				</div>
+				<div class="temperature">
+					<img src="" id="img-icon"/>
+					<span><p id="temperature"></p></span>
+				</div>
+			</div>
+			
+			<div class="list-class">
+				<ul>
+					<li class="auckland" onclick="getApiRequest('auckland')"><span>Auckland (NZ)</span></li>
+					<li class="georgia" onclick="getApiRequest('georgia')"><span>Georgia (USA)</span></li>
+					<li class="londres" onclick="getApiRequest('londres')"><span>Londres (UK)</span></li>
+					<li class="santiago" onclick="getApiRequest('santiago')"><span>Santiago (CL)</span></li>
+					<li class="sydney" onclick="getApiRequest('sydney')"><span>Sydney (AU)</span></li>
+					<li class="zurich" onclick="getApiRequest('zurich')"><span>Zurich (CH)</span></li>
+				</ul>
+			</div>
+			
+			<div id="modalLoading"><!-- Place at bottom of page --></div>
+		</div>
+		<script src="components/js/react.min.js+react-dom.min.js"></script>
+		<script src="components/js/mobx.umd.min.js"></script>
+		<script src="components/js/mobx-react@3.3.0.js"></script>
+		<script src="components/js/mobx-react-devtools.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+		<script src="index.js"></script>
+	</body>
+</html>

@@ -1,0 +1,133 @@
+html,body{
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+	overflow: hidden;
+	font-family: Impact, fantasy;
+}
+
+#content{
+	height: 100%;
+}
+
+#blur {
+    background:url(../img/santiago.jpg) no-repeat center;
+    background-size:cover;
+    -webkit-filter: blur(3px);
+    -moz-filter: blur(3px);
+    -o-filter: blur(3px);
+    -ms-filter: blur(3px);
+    filter: blur(3px);
+    position:absolute;	
+    height:100%;
+	width: 80%;
+	margin-left: 20%;
+}
+
+.text-class{
+	position: absolute;
+	width: 80%;
+	text-align: center;
+	margin-left: 20%;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+	color: #FFF;
+	font-size: 50px;
+	font-family: Courier, monospace;
+}
+
+.list-class{
+	position: absolute;
+	height: 100%;
+	width: 20%;
+}
+
+.list-class ul{
+	height: 100%;
+	list-style: none;
+	width: 100%;
+	padding: 0px;
+}
+
+.list-class ul li{
+	height: 17%;
+	width: 100%;
+	pointer-events: all;
+	text-align: center;
+	padding-top: 5%;
+	color: #FFF;
+	font-size: 20px;
+	font-family: 'fantasy';
+	font-weight: bold;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+	cursor: pointer;
+}
+
+.auckland{
+	background:url(../img/auckland.jpg) no-repeat center;
+    background-size:cover;
+}
+
+.georgia{
+	background:url(../img/georgia.jpg) no-repeat center;
+    background-size:cover;
+}
+
+.londres{
+	background:url(../img/londres.jpg) no-repeat center;
+    background-size:cover;
+}
+
+.santiago{
+	background:url(../img/santiago.jpg) no-repeat center;
+    background-size:cover;
+}
+
+.sydney{
+	background:url(../img/sydney.jpg) no-repeat center;
+    background-size:cover;
+}
+
+.zurich{
+	background:url(../img/zurich.jpg) no-repeat center;
+    background-size:cover;
+}
+
+#temperature{
+	font-size: 130px;
+}
+
+.temperature{
+	display: inline-flex;
+	position: fixed;
+	bottom: 0;
+	right: 0;
+}
+
+.temperature img{
+	width: 180px;
+}
+
+.time{
+	position: fixed;
+	top: 0;
+	left: 21%;
+}
+
+#modalLoading{
+    display:    none;
+    position:   fixed;
+    z-index:    1000;
+    top:        0;
+    left:       0;
+    height:     100%;
+    width:      100%;
+    background: rgba( 255, 255, 255, .8 ) 
+                url('../img/loading.gif') 
+                50% 50% 
+                no-repeat;
+	background-size: 100px;
+}
+
+#modalLoading.show{
+    display: block;
+}
