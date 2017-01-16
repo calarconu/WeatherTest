@@ -4,6 +4,13 @@ var redis 	= require("redis"),
 	request	= require("request"),
 	bodyParser = require('body-parser'),
 	app = express();
+	
+if (process.env.REDISTOGOURL) {
+  var rtg = require('url').parse(process.env.REDISTOGOURL);
+  config.redis.port = rtg.port;
+  config.redis.host = rtg.hostname;
+  config.redis.password = rtg.auth.split(“:”)[1];
+}
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
