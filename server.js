@@ -1,15 +1,15 @@
-var redis 	= require("redis"),
-    client	= redis.createClient(),
-	express	= require("express"),
+var express	= require("express"),
 	request	= require("request"),
 	bodyParser = require('body-parser'),
 	app = express();
 	
-if (process.env.REDISTOGOURL) {
-  var rtg = require('url').parse(process.env.REDISTOGOURL);
-  config.redis.port = rtg.port;
-  config.redis.host = rtg.hostname;
-  config.redis.password = rtg.auth.split(':')[1];
+if (process.env.REDISTOGO_URL) {
+	var rtg   = require("url").parse(process.env.REDISTOGO_URL);
+	var client = require("redis").createClient(rtg.port, rtg.hostname);
+
+	client.auth(rtg.auth.split(":")[1]);
+} else {
+    var client = require("redis").createClient();
 }
 
 app.use(bodyParser.json());
