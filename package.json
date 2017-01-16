@@ -19,6 +19,7 @@
     "webpack-dev-server": "^1.14.1"
   },
   "dependencies": {
+    "body-parser": "^1.15.2",
     "cosmicjs": "^2.1.2",
     "express": "4.14.0",
     "hogan-express": "^0.5.2",
@@ -28,6 +29,8 @@
     "react": "^15.1.0",
     "react-bootstrap": "^0.29.5",
     "react-dom": "^15.1.0",
+    "redis": "^2.6.5",
+    "request": "^2.79.0",
     "shorti": "^1.1.6",
     "slug": "^0.9.1"
   },
